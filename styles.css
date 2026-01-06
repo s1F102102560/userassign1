@@ -1,0 +1,525 @@
+/* ========== 共通スタイル ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F5F5F0;
+    color: #333;
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ========== ナビゲーション ========== */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 1rem 2rem;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #7EB6D8;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #E86A33;
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+}
+
+/* ========== コンテナ ========== */
+.container {
+    min-height: 100vh;
+    padding: 100px 2rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========== セクションタイトル ========== */
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.section-title-bar {
+    width: 4px;
+    height: 48px;
+    background: #E86A33;
+    border-radius: 2px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: #7EB6D8;
+    font-weight: 900;
+}
+
+.section-title p {
+    font-size: 0.875rem;
+    color: #999;
+    margin-top: 0.25rem;
+}
+
+/* ========== レトロTV ========== */
+.retro-tv {
+    max-width: 500px;
+    margin: 0 auto;
+    animation: scaleIn 0.6s ease-out;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.tv-frame {
+    background: #E86A33;
+    border-radius: 2rem;
+    padding: 1.5rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.tv-bezel {
+    background: #333;
+    border-radius: 1.5rem;
+    padding: 1rem;
+}
+
+.tv-screen {
+    background: white;
+    border-radius: 1rem;
+    padding: 3rem;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.tv-stand {
+    width: 100px;
+    height: 16px;
+    background: #E86A33;
+    border-radius: 0 0 8px 8px;
+    margin: 0.5rem auto 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ========== ホームページ ========== */
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.home-title {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #7EB6D8;
+    line-height: 1.1;
+}
+
+.home-subtitle {
+    margin-top: 1.5rem;
+    color: #666;
+}
+
+.student-info {
+    color: #E86A33;
+    margin-top: 0.5rem;
+}
+
+.link-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background: white;
+    border-radius: 1rem;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+    margin-bottom: 1rem;
+}
+
+.link-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transform: translateX(5px);
+}
+
+.link-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+/* ========== プロフィールページ ========== */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.profile-image {
+    aspect-ratio: 4/5;
+    background: linear-gradient(135deg, #e0e0e0, #c0c0c0);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image-placeholder {
+    text-align: center;
+    color: #999;
+}
+
+.profile-name {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #7EB6D8;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.profile-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.profile-item-bar {
+    width: 4px;
+    height: 24px;
+    background: #E86A33;
+    border-radius: 2px;
+}
+
+.profile-about {
+    margin-top: 2rem;
+}
+
+.profile-about h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* ========== 作品ページ ========== */
+.works-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.works-content h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.works-video {
+    aspect-ratio: 16/9;
+    background: linear-gradient(135deg, #d0d0d0, #a0a0a0);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.play-button {
+    width: 64px;
+    height: 64px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    transition: transform 0.3s;
+}
+
+.works-video:hover .play-button {
+    transform: scale(1.1);
+}
+
+.badge {
+    position: absolute;
+    top: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+.badge-live {
+    left: 1rem;
+    background: #dc2626;
+    color: white;
+}
+
+.badge-new {
+    right: 1rem;
+    background: #dc2626;
+    color: white;
+}
+
+.badge-award {
+    top: -1rem;
+    right: -1rem;
+    background: #fbbf24;
+    color: #78350f;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skills-tag {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(126, 182, 216, 0.1);
+    color: #7EB6D8;
+    border-radius: 2rem;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+}
+
+/* ========== スキルページ ========== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.skill-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s;
+}
+
+.skill-card:hover {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.skill-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.skill-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.skill-item {
+    margin-bottom: 1rem;
+}
+
+.skill-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+}
+
+.skill-bar {
+    height: 8px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 1s ease-out;
+}
+
+/* ========== お問い合わせページ ========== */
+.contact-card {
+    max-width: 700px;
+    margin: 2rem auto;
+    background: white;
+    border-radius: 3rem;
+    padding: 3rem;
+    text-align: center;
+    border: 2px solid #10b981;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    font-size: 1.5rem;
+}
+
+.contact-item a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-item a:hover {
+    color: #E86A33;
+}
+
+/* ========== ボタン ========== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    margin-top: 1rem;
+}
+
+.btn-primary {
+    background: #E86A33;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #d55d2a;
+}
+
+.btn-secondary {
+    background: #7EB6D8;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #6da5c7;
+}
+
+/* ========== フッター ========== */
+footer {
+    background: white;
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 3rem;
+}
+
+/* ========== レスポンシブ ========== */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .home-grid,
+    .profile-grid,
+    .works-grid,
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-title {
+        font-size: 2.5rem;
+    }
+
+    .container {
+        padding: 80px 1rem 1rem;
+    }
+}
